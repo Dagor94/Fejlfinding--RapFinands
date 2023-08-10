@@ -84,7 +84,7 @@ namespace Rap_Finans
             if (tal < 1 || tal > konti.Count) {
                 Console.Clear();
                 Console.WriteLine("Ugyldigt valg");
-                return dos_findKonto();
+                return dos_findKonto();     // Changed so it no longer returns null - Now it returns the method Findkonto so it keeps trying to get a valid response.
             }
             return konti[tal-1];
         }
@@ -172,11 +172,11 @@ namespace Rap_Finans
         public static void gem() 
         {
             File.WriteAllText(datafil,JsonConvert.SerializeObject(konti));
-            File.Delete(datafil); //Fjern debug fil
+            //File.Delete(datafil); //Fjern debug fil
         }
         public static void hent()
         {
-            datafil = "debug_bank.json"; //Debug - brug en anden datafil til debug ~Konrad
+            //datafil = "debug_bank.json"; //Debug - brug en anden datafil til debug ~Konrad
             if (File.Exists(datafil)) {
                 string json = File.ReadAllText(datafil);
                 konti = JsonConvert.DeserializeObject<List<Konto>>(json);

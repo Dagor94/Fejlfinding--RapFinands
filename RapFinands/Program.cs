@@ -8,7 +8,7 @@ namespace Rap_Finans
     /**
     Dette BANK PROGRAM ER LAVET af Konrad Sommer! Copy(c) Right All rights reserveret 2020
     idé og udtænkt af Anne Dam for Voldum Bank I/S
-    Rap Finands
+    Rap Finans
     **/
     class Program
     {
@@ -48,8 +48,7 @@ namespace Rap_Finans
                 Console.WriteLine("0. Afslut");
 
                 Console.Write(">");
-                string valg1 = Console.ReadLine();
-                int valg = int.Parse(valg1+1);
+                int valg = int.Parse(Console.ReadLine());
                 
                 switch (valg) {
                     case 1:

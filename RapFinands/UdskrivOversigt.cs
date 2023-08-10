@@ -1,4 +1,4 @@
-namespace Rap_Finands {
+namespace Rap_Finans {
     class UdskrivKontoOversigt {
         /*public static void Main(string[] args) {
              

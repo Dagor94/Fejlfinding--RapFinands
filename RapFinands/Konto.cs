@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-namespace Rap_Finands {
+namespace Rap_Finans {
     class Konto {
         public string registreringsnr;
         public string kontonr;

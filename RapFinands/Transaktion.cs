@@ -1,6 +1,6 @@
 using System;
 
-namespace Rap_Finands {
+namespace Rap_Finans {
     class Transaktion {
         public string tekst;
         public float saldo;

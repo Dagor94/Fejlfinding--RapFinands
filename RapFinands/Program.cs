@@ -67,13 +67,13 @@ namespace Rap_Finans
                         Console.WriteLine("UGYLDIGT VALGT!!");
                         Console.ReadKey();
                         break;
-
                 }
             }
             Console.Clear();
         }
         static Konto dos_findKonto() 
         {
+            Console.Clear();
             for (var i = 1; i <= konti.Count;i++)
             {
                 Console.WriteLine(i+". "+konti[i-1].registreringsnr+" "+konti[i-1].kontonr+" ejes af "+konti[i-1].ejer);
@@ -134,15 +134,20 @@ namespace Rap_Finans
             }
         }
         static void dos_udskrivKonto(Konto k) {
+            int i = 0;
+            Console.Clear();
             Console.WriteLine("Konto for "+k.ejer+": "+k.registreringsnr+" "+k.kontonr);
             Console.WriteLine("================");
             Console.WriteLine("Tekst\t\t\t\tBeløb\t\tSaldo");
             foreach (Transaktion t in k.transaktioner) {
-                Console.Write(t.tekst+"\t\t\t\t");
+                i++;
+                Console.SetCursorPosition(0,2+i);
+                Console.Write(t.tekst);
+                Console.SetCursorPosition(32, 2 + i);
                 Console.Write(t.amount+"\t\t");
-                Console.WriteLine(t.saldo);
+                Console.Write(t.saldo);
             }
-            Console.WriteLine("================\n");
+            Console.WriteLine("\n================\n");
 
         }
         

@@ -82,9 +82,9 @@ namespace Rap_Finans
             Console.Write(">");
             int tal = int.Parse(Console.ReadLine());
             if (tal < 1 || tal > konti.Count) {
-                Console.WriteLine("Ugyldigt valg");
                 Console.Clear();
-                return null;
+                Console.WriteLine("Ugyldigt valg");
+                return dos_findKonto();
             }
             return konti[tal-1];
         }
